@@ -1,0 +1,21 @@
+@import url('cssFonts.css');
+
+#barraTopo{height: 10vh; background-color: #ff7916;}
+
+#mapa{background-color: #ff7916;}
+#mapcanvas{opacity: .9;}
+p.chamada {
+    color: #99cc66;
+    font-size: 48px;
+    text-align: center;
+    /*padding-top: 120px;*/
+    /*padding-bottom: 25px;*/
+    font-family: 'bauhaus_93regular';
+    text-shadow: 1px 2px 0px #fff;
+    position:absolute;
+    top: 28%; z-index: 1;
+    width: 100%;
+}
+p.chamada span {
+    color: #000;
+    font-family: 'bauhaus_93regular';}
