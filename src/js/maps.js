@@ -28,9 +28,12 @@ function success(position) {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
+
+   
+
     var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
 
-    var image = 'images/mark-you.png';
+    var image = 'images/mark-you.png'; 
     var marker = new google.maps.Marker({
         position: latlng,
         map: map,

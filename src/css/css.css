@@ -3,6 +3,11 @@
 #barraTopo{height: 10vh; background-color: #ff7916;}
 
 #mapa{background-color: #ff7916;}
+#mapa fieldset{ background-color: rgba(255,255,255,.5); border:4px solid #ff7916;  overflow: hidden;
+	position: absolute; bottom: 35%; z-index: 1; width: 50vw; margin: 0 25vw; border-radius: 5px; }
+	#mapa fieldset [type=text]{width: 90%; line-height: 36px; font-size: 28px; border:none; background-color: #fff; padding: 5px;}
+	#mapa fieldset [type=submit]{width: 10%; background-color: #ff7916; line-height: 45px; color: #fff; text-transform: uppercase; border:none; vertical-align: top;}
+
 #mapcanvas{opacity: .9;}
 p.chamada {
     color: #99cc66;
@@ -19,3 +24,59 @@ p.chamada {
 p.chamada span {
     color: #000;
     font-family: 'bauhaus_93regular';}
+
+.blocoAnuncios{margin:15px 0;}
+
+.blocoAnuncios #aluguel,
+.blocoAnuncios #servicos{margin:15px 0;}
+
+.boxAnuncio {
+    height: 300px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    font-family: Arial, Tahoma, sans-serif;
+}
+.blocoAnuncios .boxAnuncio a,
+.admin.anuncios .boxAnuncio a:first-child {
+    border: 1px solid #ddd;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+.boxAnuncio figure {
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+}
+.boxAnuncio img{width: 100%;}
+
+.boxAnuncio .preco {
+    background-color: #ff7916;
+    position: absolute;
+    top: 130px;
+    left: 15px;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.boxAnuncio p.tipoValor {
+    font-size: 10px;
+    margin: 0;
+    text-align: left;
+}
+.blocoAnuncios p {
+    font-size: 14px;
+    color: #996666;
+    margin-bottom: 15px;
+}
+.blocoAnuncios > h2, .blocoAnuncios > p {
+    text-align: center;
+    font-family: Arial, Tahoma, sans-serif;
+}
+.boxAnuncio figcaption {
+    font-size: 14px;
+    color: #666;
+}
