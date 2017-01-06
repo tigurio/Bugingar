@@ -1,5 +1,20 @@
 @import url('cssFonts.css');
 
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    position: relative;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
 #barraTopo{height: 10vh; background-color: #ff7916;}
 
 #mapa{background-color: #ff7916;}
@@ -13,8 +28,8 @@ p.chamada {
     color: #99cc66;
     font-size: 48px;
     text-align: center;
-    /*padding-top: 120px;*/
-    /*padding-bottom: 25px;*/
+    padding-top: 120px;
+    padding-bottom: 25px;
     font-family: 'bauhaus_93regular';
     text-shadow: 1px 2px 0px #fff;
     position:absolute;
@@ -31,52 +46,63 @@ p.chamada span {
 .blocoAnuncios #servicos{margin:15px 0;}
 
 .boxAnuncio {
-    height: 300px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-    font-family: Arial, Tahoma, sans-serif;
-}
+    height: 300px; margin-bottom: 30px; box-sizing: border-box; font-family: Arial, Tahoma, sans-serif;}
 .blocoAnuncios .boxAnuncio a,
 .admin.anuncios .boxAnuncio a:first-child {
-    border: 1px solid #ddd;
-    display: block;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-}
-.boxAnuncio figure {
-    margin-bottom: 20px;
-    overflow: hidden;
-    width: 100%;
-    height: 150px;
-}
+    border: 1px solid #ddd; display: block; padding: 10px; width: 100%; height: 100%;}
+.boxAnuncio figure { margin-bottom: 20px; overflow: hidden; width: 100%; height: 150px;}
 .boxAnuncio img{width: 100%;}
+.boxAnuncio .preco { background-color: #ff7916; position: absolute; top: 130px; left: 15px; padding: 10px; color: #fff; font-size: 14px;
+    font-weight: bold;}
+.boxAnuncio p.tipoValor { font-size: 10px; margin: 0; text-align: left;}
+.blocoAnuncios p {font-size: 14px; color: #996666; margin-bottom: 15px;}
+.blocoAnuncios > h2, .blocoAnuncios > p {text-align: center; font-family: Arial, Tahoma, sans-serif;}
+.boxAnuncio figcaption { font-size: 14px; color: #666;}
 
-.boxAnuncio .preco {
-    background-color: #ff7916;
-    position: absolute;
-    top: 130px;
-    left: 15px;
-    padding: 10px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-}
-.boxAnuncio p.tipoValor {
-    font-size: 10px;
-    margin: 0;
-    text-align: left;
-}
-.blocoAnuncios p {
-    font-size: 14px;
-    color: #996666;
-    margin-bottom: 15px;
-}
-.blocoAnuncios > h2, .blocoAnuncios > p {
-    text-align: center;
-    font-family: Arial, Tahoma, sans-serif;
-}
-.boxAnuncio figcaption {
-    font-size: 14px;
-    color: #666;
-}
+
+.anuncio #map{height: 300px;}
+.anuncio .anunciante{width: 100%; height: auto; display: inline-block; background-color: #f2f2f2; border-bottom: 1px solid #ccc; padding: 15px;}
+.anuncio .anunciante figure{width: 150px; height: 150px; float: left; margin: 20px; border-radius: 50%; border:1px solid #ccc; overflow: hidden;}
+.anuncio .anunciante figcaption{font-size: 20px; font-family: Tahoma, Arial, sans-serif; margin-top: 30px; color: #ff7916;}
+.anuncio .dadosAnuncio{width: 100%; padding: 30px 0;}
+.anuncio .dadosAnuncio figure{margin-bottom: 30px;}
+.anuncio .dadosAnuncio p{margin:5px 0; font-size: 12px;}
+.anuncio .dadosAnuncio .thumbnail{position: absolute; top: 30px; left: -40px; border: 1px solid #ddd; background-color: #f2f2f2; z-index: 1; width: 100px;}
+.anuncio .dadosAnuncio .thumbnail img{margin: 9px;}
+
+.compartilharAnuncio {position: absolute;top: 10px; right: 20px;}
+.compartilharAnuncio p{display: inline; font-size: 10px; text-transform: uppercase; color: #666;}
+.compartilharAnuncio span{ border: 1px solid #666; border-radius:50%; display: inline-block; min-width: 32px; text-align: center; padding: 5px;}
+.compartilharAnuncio span:hover{background-color: #fff;}
+.compartilharAnuncio span a{color:#666; display: block; width: 100%; height: 100%;}
+
+.anuncio .box-pagAnuncio{border:1px solid #ddd; border-radius: 3px; background-color: #f2f2f2; margin:15px 0;}
+.anuncio h2.tituloAnuncio{ font-size: 24px; color:#666; margin-top: 20px; }
+.anuncio .topoBox{ padding: 5px 20px; font-size: 14px; text-transform: uppercase;}
+.anuncio .topoBox span{font-size: 14px;}
+.anuncio form input[type=text],
+.anuncio form textarea{ border:1px solid #ddd; background-color: #fff; color:#666; font-size: 12px;}
+.anuncio .box-pagAnuncio form label{font-size: 12px; line-height: 30px;}
+.anuncio .box-pagAnuncio form{padding: 15px;}
+.anuncio .box-pagAnuncio form input[type="submit"]{border-radius: 5px; margin-top: 10px; background-color: #99cc66; color: #fff; padding: 0px 10px; line-height: 30px;}
+.anuncio a.btn{background-color: #ccc; font-size: 12px; cursor: pointer;
+    border-radius: 5px; color: #fff; padding: 10px 30px; display: inline-block; text-transform: uppercase;}
+
+.anuncio a.btn:hover,.anuncio a.click{background-color: #ff7916;}
+.anuncio a.click{pointer-events: none; cursor: default;}
+
+.anuncio .infoAnuncio .topoBox{background-color: #ff7916; color: #fff; font-size: 24px; font-weight: bold;}
+.anuncio .infoAnuncio form input[type=text]{width: 190px; padding: 0 10px; line-height: 30px;}
+.anuncio .infoAnuncio a.btn{margin: 15px 15%; width:70%;}
+
+.avaliacao{ font-size: 24px; color:#FF7916; text-align: center; margin-bottom: 15px;}
+.avaliacao i{cursor: pointer;}
+.avaliacao p{font-size: 12px; color:#444;}
+
+.anuncio .faleAnunciante .topoBox{background-color: #ccc; color: #fff; font-size: 14px; }
+.anuncio .faleAnunciante .verContato{margin:15px 15%; width: 70%; cursor: pointer;}
+.anuncio .faleAnunciante .phone{display: none; margin:15px 68px; }
+.anuncio .faleAnunciante textarea{width: 100%;}
+.anuncio .faleAnunciante input[type="submit"]{float: right;}
+
+.comentario{display: inline-block; /*width: 100%;*/}
